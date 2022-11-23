@@ -11,3 +11,10 @@
     --home-glow: 0px 0px 4px darkgreen;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat', sans-serif;
+}
+
