@@ -149,6 +149,28 @@ input:checked ~ .bubble::after {
     opacity: 1;
 }
 
+.create-task .options label div {
+    color: var(--dark);
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+
+.create-task input[type="submit"] {
+    display: block;
+    width: 100%;
+    font-size: 1.125rem;
+    padding: 1rem 1.5rem;
+    color: #FFF;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    box-shadow: var(--home-glow);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.create-task input[type="submit"]: hover {
+    opacity:0.75;
+}
 
 
 
