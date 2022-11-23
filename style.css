@@ -3,6 +3,7 @@
     --work: skyblue;
     --home: green;
     --light: #EEE;
+    --gray: #AAA;
     --dark: #313154;
     --danger: red;
 
@@ -38,4 +39,20 @@ section {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
+
+h3 {
+    color: var(--dark);
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    color: var(--gray);
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+
 
