@@ -1,0 +1,13 @@
+:root {
+    --primary: pink;
+    --work: skyblue;
+    --home: green;
+    --light: #EEE;
+    --dark: #313154;
+    --danger: red;
+
+    --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --work-glow: 0px 0px 4px navy;
+    --home-glow: 0px 0px 4px darkgreen;
+}
+
