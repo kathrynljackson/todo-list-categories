@@ -169,7 +169,7 @@ input:checked ~ .bubble::after {
     transition: 0.2s ease-in-out;
 }
 
-.create-task input[type="submit"]: hover {
+.create-task input[type="submit"]:hover {
     opacity:0.75;
 }
 
