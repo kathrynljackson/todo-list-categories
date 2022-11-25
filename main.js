@@ -98,6 +98,25 @@ function DisplayTasks() {
 
             DisplayTasks();
          })
+
+         edit.addEventListener('click', e => {
+            const input = content.querySelector('input');
+            input.removeAttribute('readonly');
+            input.focus();
+            input.addEventListener('blur', e => {
+                input.setAttribute('readonly', true);
+                taskItem.content = e.target.value;
+                localStorage.setItem('tasks', JSON.stringify(tasks));
+                DisplayTasks();
+            })
+         })
+
+         deleteTaskBtn.addEventListener('click', e => {
+            console.log('DELETE TASK')
+            tasks = tasks.filter(t => t != taskItem);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            DisplayTasks(); 
+         })
     })
 }
 
