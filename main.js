@@ -14,17 +14,20 @@ window.addEventListener('load', () => {
     newTaskForm.addEventListener('submit', e => {
         e.preventDefault();
 
+        //task object structure
         const task = {
             content: e.target.elements.content.value,
-            category: e.target.elements.content.value,
+            category: e.target.elements.category.value,
             done: false,
             createdAt: new Date().getTime()
         }
 
         tasks.push(task);
- 
+        
+        // save new task
         localStorage.setItem('tasks', JSON.stringify(tasks));
 
+        // reset form input
         e.target.reset();
     })
 });
