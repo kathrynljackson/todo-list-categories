@@ -48,7 +48,7 @@ section {
 
 h3 {
     color: var(--dark);
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 400;
     margin-bottom: 0.5rem;
 }
@@ -172,6 +172,7 @@ input:checked ~ .bubble::after {
     box-shadow: var(--primary-glow);
     cursor: pointer;
     transition: 0.2s ease-in-out;
+    margin-bottom: 5rem;
 }
 
 .create-task input[type="submit"]:hover {
@@ -237,4 +238,19 @@ input:checked ~ .bubble::after {
 .todo-item.done .todo-content input {
     text-decoration: line-through;
     color: var(--gray);
+}
+
+.no-tasks {
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.show-empty-warning {
+    display: none;
 }

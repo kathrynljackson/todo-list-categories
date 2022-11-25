@@ -38,8 +38,13 @@ window.addEventListener('load', () => {
 })
 
 function DisplayTasks() {
+    console.log(tasks.length);
     const todoList = document.querySelector('#todo-list');
+    const noTasks = document.querySelector('#no-tasks');
     todoList.innerHTML = '';
+
+    // Show notification if there are no tasks
+    noTasks.classList.toggle("show-empty-warning", tasks.length > 0);
 
     // Iterate through the array of tasks and create an individual element for each one
     tasks.forEach(taskItem => {
