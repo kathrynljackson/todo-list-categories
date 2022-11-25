@@ -29,6 +29,10 @@ input:not([type="radio"]):not([type="checkbox"]), button {
     cursor: initial;
 }
 
+input::placeholder {
+    opacity: 0.8;
+}
+
 body {
     background: var(--light);
     color: var(--dark);
