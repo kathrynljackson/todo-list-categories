@@ -3,6 +3,7 @@ window.addEventListener('load', () => {
     tasks = JSON.parse(localStorage.getItem('tasks')) || [];
     const nameInput = document.querySelector('#name');
     const newTaskForm = document.querySelector('#new-form');
+    const addTaskBtn = document.querySelector('.add-task');
 
     //set the user's name at the top onChange
     const username = localStorage.getItem('username') || '';
@@ -22,13 +23,16 @@ window.addEventListener('load', () => {
             createdAt: new Date().getTime()
         }
 
-        tasks.push(task);
-        
-        // save new task
-        localStorage.setItem('tasks', JSON.stringify(tasks));
-
-        // reset form input
-        e.target.reset();
+        //only create a new task if there is a value for both content and category
+        if(task.content && task.category){
+            tasks.push(task);
+            
+            // save new task
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+    
+            // reset form input
+            e.target.reset();
+        }
 
         // Display tasks from local storage
         DisplayTasks();
@@ -38,7 +42,6 @@ window.addEventListener('load', () => {
 })
 
 function DisplayTasks() {
-    console.log(tasks.length);
     const todoList = document.querySelector('#todo-list');
     const noTasks = document.querySelector('#no-tasks');
     todoList.innerHTML = '';
