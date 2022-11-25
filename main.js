@@ -24,6 +24,8 @@ window.addEventListener('load', () => {
         tasks.push(task);
  
         localStorage.setItem('tasks', JSON.stringify(tasks));
+
+        e.target.reset();
     })
 });
 
