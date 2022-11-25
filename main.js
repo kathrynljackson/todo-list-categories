@@ -38,7 +38,6 @@ window.addEventListener('load', () => {
 })
 
 function DisplayTasks() {
-    console.log('DISPLAY TASKS RUNNING')
     const todoList = document.querySelector('#todo-list');
     todoList.innerHTML = '';
 
@@ -80,8 +79,25 @@ function DisplayTasks() {
         task.appendChild(label);
         task.appendChild(content);
         task.appendChild(actions);
-        
         todoList.appendChild(task);
+
+
+        if(taskItem.done){
+            task.classList.add('done');
+        }
+
+        input.addEventListener('click', e => {
+            taskItem.done = e.target.checked;
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            
+            if(taskItem.done){
+                task.classList.add('done');
+            } else {
+                task.classList.remove('done');
+            }
+
+            DisplayTasks();
+         })
     })
 }
 
